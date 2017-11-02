@@ -43,6 +43,7 @@ public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
 		return new PageImpl<>(query.getResultList(), pageable, total(lancamentoFilter));
 	}
 	
+
 	@Override
 	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable) {
 		CriteriaBuilder builder = manager.getCriteriaBuilder();
